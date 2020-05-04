@@ -24,7 +24,7 @@ int main(void) {
 	unsigned char sensor;
    /* Insert your solution below */
     while (1) {
-	sensor = ~PINA;
+	sensor = ~PINA & 0x0F;
 	
 	lowFuel = (sensor <= 0x04) ? 0x40 : 0x00;
 
